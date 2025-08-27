@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, Mail } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { href: "#home", label: "Início" },
@@ -74,6 +75,8 @@ export const Navigation = () => {
             ))}
             
             <div className="flex items-center gap-3 ml-4">
+              <ThemeToggle />
+              
               <Button 
                 size="sm" 
                 variant="outline"
@@ -121,6 +124,10 @@ export const Navigation = () => {
               ))}
               
               <div className="px-4 pt-4 space-y-2">
+                <div className="flex justify-center mb-3">
+                  <ThemeToggle />
+                </div>
+                
                 <Button 
                   size="sm" 
                   variant="outline"
