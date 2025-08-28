@@ -11,6 +11,7 @@ import {
   Lightbulb,
   Target
 } from "lucide-react";
+import { TechCarousel } from "./TechCarousel";
 
 const technicalSkills = [
   { name: "Siemens TIA Portal", level: 95, category: "Programação" },
@@ -32,11 +33,6 @@ const managementSkills = [
   { name: "Análise de Performance", level: 80, icon: BarChart3 }
 ];
 
-const technologies = [
-  "Siemens", "TIA Portal", "WinCC", "Step 7", "NodeRed", "SQL", 
-  "SCADA", "HMI", "PLC", "VFD", "Sensores", "Atuadores",
-  "Pneumática", "Hidráulica", "Ethernet IP", "Profinet", "Modbus"
-];
 
 export const Skills = () => {
   return (
@@ -122,25 +118,19 @@ export const Skills = () => {
           </Card>
         </div>
         
-        {/* Technologies */}
+        {/* Technologies Carousel */}
         <Card className="animate-fade-up bg-gradient-to-r from-background to-muted/30" style={{ animationDelay: '0.4s' }}>
           <CardHeader>
             <CardTitle className="text-xl text-industrial text-center">
               Tecnologias e Ferramentas
             </CardTitle>
+            <p className="text-sm text-muted-foreground text-center">
+              Principais tecnologias utilizadas em projetos de automação industrial
+            </p>
           </CardHeader>
           
           <CardContent>
-            <div className="flex flex-wrap gap-3 justify-center">
-              {technologies.map((tech, index) => (
-                <Badge 
-                  key={index}
-                  className="bg-industrial/10 text-industrial hover:bg-industrial/20 transition-all duration-300 px-4 py-2 text-sm"
-                >
-                  {tech}
-                </Badge>
-              ))}
-            </div>
+            <TechCarousel />
           </CardContent>
         </Card>
       </div>

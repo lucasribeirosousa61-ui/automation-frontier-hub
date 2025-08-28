@@ -10,8 +10,7 @@ import {
   Snowflake, 
   Wind, 
   Flame,
-  ExternalLink,
-  Calendar
+  ExternalLink
 } from "lucide-react";
 
 const projects = [
@@ -22,17 +21,15 @@ const projects = [
     technologies: ["SCADA", "SQL", "HMI", "NodeRed"],
     icon: MonitorSpeaker,
     category: "Supervisório",
-    year: "2024",
     impact: "Redução de 40% no tempo de diagnóstico de falhas"
   },
   {
     title: "Automação de Embalagem de Tinta",
-    company: "Durametal S/A",
+    company: "Hidrotintas",
     description: "Automação completa do processo de embalagem de tinta para garantir maior produtividade e padronização do processo de envase.",
     technologies: ["CLP", "Sensores", "IHM", "Pneumática"],
     icon: Package,
     category: "Embalagem",
-    year: "2013",
     impact: "Aumento de 35% na produtividade"
   },
   {
@@ -42,17 +39,15 @@ const projects = [
     technologies: ["CLP", "Sensores de Nível", "Válvulas", "SCADA"],
     icon: Truck,
     category: "Transporte",
-    year: "2012",
     impact: "99% de precisão no transporte"
   },
   {
     title: "Processo de Envase de Tinta",
-    company: "Durametal S/A",
+    company: "Hidrotintas",
     description: "Automação do processo de envase de tintas para garantir padrão na pesagem dos produtos, atendendo normas de comercialização.",
     technologies: ["Células de Carga", "CLP", "IHM", "Instrumentação"],
     icon: Scale,
     category: "Pesagem",
-    year: "2011",
     impact: "Precisão de 99.8% na pesagem"
   },
   {
@@ -62,7 +57,6 @@ const projects = [
     technologies: ["Sensores Ópticos", "CLP", "Motores", "IHM"],
     icon: Eye,
     category: "Seleção",
-    year: "2010",
     impact: "100% de precisão na seleção"
   },
   {
@@ -72,7 +66,6 @@ const projects = [
     technologies: ["Controle de Temperatura", "CLP", "Sensores", "SCADA"],
     icon: Snowflake,
     category: "Resfriamento",
-    year: "2010",
     impact: "Melhoria de 25% na qualidade"
   },
   {
@@ -82,7 +75,6 @@ const projects = [
     technologies: ["Ventiladores", "CLP", "Sensores de Pressão", "IHM"],
     icon: Wind,
     category: "Exaustão",
-    year: "2009",
     impact: "Redução de 60% nas emissões"
   },
   {
@@ -92,7 +84,6 @@ const projects = [
     technologies: ["Controle de Temperatura", "CLP", "Instrumentação", "SCADA"],
     icon: Flame,
     category: "Retrofit",
-    year: "2008",
     impact: "Melhoria de 30% na conformidade"
   }
 ];
@@ -126,15 +117,9 @@ export const Projects = () => {
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     
-                    <div className="text-right">
-                      <Badge variant="outline" className="border-accent text-accent mb-2">
-                        {project.category}
-                      </Badge>
-                      <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                        <Calendar className="w-3 h-3" />
-                        {project.year}
-                      </div>
-                    </div>
+                    <Badge variant="outline" className="border-accent text-accent">
+                      {project.category}
+                    </Badge>
                   </div>
                   
                   <div>

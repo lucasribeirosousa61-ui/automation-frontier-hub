@@ -88,7 +88,7 @@ export const Navigation = () => {
               
               <Button 
                 size="sm"
-                className="bg-gradient-primary hover:shadow-[var(--shadow-glow)] transition-all duration-300"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
               >
                 <Download className="w-4 h-4 mr-2" />
                 CV
@@ -140,7 +140,7 @@ export const Navigation = () => {
                 
                 <Button 
                   size="sm"
-                  className="w-full bg-gradient-primary"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download CV
